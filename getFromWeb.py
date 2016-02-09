@@ -37,6 +37,8 @@ def getHTMLdziekanat():
     encodedFields = urllib.urlencode(formFields)
     response = opener.open(uri,encodedFields)
     thePage = response.read()
+    response = opener.open("https://dziekanat.agh.edu.pl/Wyloguj.aspx",encodedFields)
+    opener.close()
     return thePage
 
 class CoolParser(HTMLParser):
@@ -123,11 +125,12 @@ def getPrevGrades():
         return string
 
 def sendMail(tresc):
-    email = mail
-    adres = '| mailx -s \"Deanery status\" ' + "\"" + email + "\""
-    open("tresc","w").write("Subject: Deanery status \nContent-Type: text/plain; charset=\"utf-8\" \n" + tresc)
-    os.system('/usr/sbin/sendmail ' + mail + ' < tresc')
-    print '/usr/sbin/sendmail ' + mail + ' < tresc'
+    if tresc:
+        email = mail
+        adres = '| mailx -s \"Deanery status\" ' + "\"" + email + "\""
+        open("tresc","w").write("Subject: Deanery status \nContent-Type: text/plain; charset=\"utf-8\" \n" + tresc)
+        os.system('/usr/sbin/sendmail ' + mail + ' < tresc')
+        print '/usr/sbin/sendmail ' + mail + ' < tresc'
 
 a = getPrevGrades()
 if a != "":

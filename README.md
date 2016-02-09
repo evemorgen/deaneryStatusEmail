@@ -26,6 +26,6 @@ chmod 700 sekret.pyc
 Dzięki temu nikt nie będzie miał dostępu do Twoich danych
 
 8) profit? <br />
-9) jeśli chcesz sprawdzić czy skrypt działa ok to w głównym katalogu Twojego konta (tj. ~/ ) powinien znajdować się plik "stare.csv", usuń z niego jakąś ocenę i czekaj na email. Jeżeli wszystko działa tak jak trzeba to po około minucie powinieneś dostać email z oceną. </ br>
-10) Jeżeli coś nie działa to możesz odpalić skrypt samodzielnie i sprawdzić output </ br>
+9) jeśli chcesz sprawdzić czy skrypt działa ok to w głównym katalogu Twojego konta (tj. ~/ ) powinien znajdować się plik "stare.csv", usuń z niego jakąś ocenę i czekaj na email. Jeżeli wszystko działa tak jak trzeba to po około minucie powinieneś dostać email z oceną. <br />
+10) Jeżeli coś nie działa to możesz odpalić skrypt samodzielnie i sprawdzić output <br />
 python2.6 getFromWeb.py
